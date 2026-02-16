@@ -16,7 +16,7 @@ date, I do not guarantee that the application will be running there.
 
 ## AI Use:
 I acknowledge that Gemini AI was used to help me set up this website, as this _was_ my rodeo. I used it primarily to learn how to
-connect to my droplet through ssh and to do some minor debugging on the provide application code.
+connect to my droplet through ssh and to do some minor debugging on the provided application code.
 
 ## Assumptions:
 I assume that the reader has not attended the class lab sessions.
