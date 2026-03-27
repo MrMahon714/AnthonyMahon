@@ -1,0 +1,36 @@
+@startuml
+start
+:Enter Username and Password;
+
+if(Is password correct?) then (yes)
+    :User Logged In;
+    ' This label allows us to loop back here
+    label menu
+    
+    :Choose Action;
+    
+    split
+        :Search a Color;
+        if(Does color exist?) then (yes)
+            :Output that color;
+        else (no)
+            :Output nothing;
+        endif
+        goto menu
+    
+    split again
+        :Add a Color;
+        :Output "Color has been added";
+        goto menu
+        
+    split again
+        :Log Out;
+        stop
+    end split
+
+else (no)
+    :Deny Access; Try Again;
+    stop
+
+endif
+@enduml
