@@ -1,0 +1,22 @@
+@startuml
+class User {
+    - username: String
+    - password: String
+    - userId: Integer
+    + login(): Boolean
+    + logout(): void
+}
+
+class ColorManager {
+    + searchColors(colorName: String): String
+    + addColor(colorName: String): void
+}
+
+class Color {
+    - colorId: Integer
+    - colorName: String
+}
+
+User "1" -> "1" ColorManager : Interacts with
+ColorManager "1" o-- "*" Color : manages
+@enduml
