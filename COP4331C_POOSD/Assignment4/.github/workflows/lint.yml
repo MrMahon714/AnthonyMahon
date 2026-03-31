@@ -1,0 +1,23 @@
+name: Automated Linting
+
+#Trigger: Run this whenever someone pushes code or opens a pull request
+on: [push, pull_request]
+
+jobs:
+  check-code-quality:
+    runs-on: ubuntu-latest    #Use a virtual Ubuntu Linux computer provided by GitHub
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4    #Copy the code onto the virtual computer
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4    #Install Node.js
+        with:
+            node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run linters
+        run: npm run lint    #Run the 'lint' shortcut in package.scripts.json
