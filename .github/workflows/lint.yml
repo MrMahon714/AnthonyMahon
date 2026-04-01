@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4    #Copy the code onto the virtual computer
+        uses: actions/checkout@v6    #Copy the code onto the virtual computer
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4    #Install Node.js
+        uses: actions/setup-node@v6    #Install Node.js
         with:
             node-version: '22'    #Version 20 is reaching its end of life as of April 2026
 
