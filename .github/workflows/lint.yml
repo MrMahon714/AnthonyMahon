@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4    #Install Node.js
         with:
-            node-version: '20'
+            node-version: '22'    #Version 20 is reaching its end of life as of April 2026
 
       - name: Install dependencies
         run: npm install
