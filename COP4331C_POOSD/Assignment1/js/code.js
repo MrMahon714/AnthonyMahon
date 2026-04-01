@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const urlBase = 'http://anthonymahon.xyz/LAMPAPI';
 const extension = 'php';
 
@@ -30,7 +31,7 @@ function doLogin()
 	{
 		xhr.onreadystatechange = function() 
 		{
-			if (this.readyState == 4 && this.status == 200) 
+			if (this.readyState === 4 && this.status === 200) 
 			{
 				const jsonObject = JSON.parse( xhr.responseText );
 				userId = jsonObject.id;
@@ -79,15 +80,15 @@ function readCookie()
 	{
 		const thisOne = splits[i].trim();
 		const tokens = thisOne.split("=");
-		if( tokens[0] == "firstName" )
+		if( tokens[0] === "firstName" )
 		{
 			firstName = tokens[1];
 		}
-		else if( tokens[0] == "lastName" )
+		else if( tokens[0] === "lastName" )
 		{
 			lastName = tokens[1];
 		}
-		else if( tokens[0] == "userId" )
+		else if( tokens[0] === "userId" )
 		{
 			userId = parseInt( tokens[1].trim() );
 		}
@@ -129,7 +130,7 @@ function addColor()
 	{
 		xhr.onreadystatechange = function() 
 		{
-			if (this.readyState == 4 && this.status == 200) 
+			if (this.readyState === 4 && this.status === 200) 
 			{
 				document.getElementById("colorAddResult").innerHTML = "Color has been added";
 			}
@@ -162,7 +163,7 @@ function searchColor()
 	{
 		xhr.onreadystatechange = function() 
 		{
-			if (this.readyState == 4 && this.status == 200) 
+			if (this.readyState === 4 && this.status === 200) 
 			{
 				document.getElementById("colorSearchResult").innerHTML = "Color(s) has been retrieved";
 				const jsonObject = JSON.parse( xhr.responseText );
