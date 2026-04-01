@@ -7,6 +7,10 @@ jobs:
   check-code-quality:
     runs-on: ubuntu-latest    #Use a virtual Ubuntu Linux computer provided by GitHub
 
+    defaults:    #Tell Github's virtual computer to cd into the assignment folder first
+      run:
+        working-directory: ./COP4331C_POOSD/Assignment1
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4    #Copy the code onto the virtual computer
@@ -14,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4    #Install Node.js
         with:
-            node-version: '20'
+            node-version: '22'    #Version 20 is reaching its end of life as of April 2026
 
       - name: Install dependencies
         run: npm install
