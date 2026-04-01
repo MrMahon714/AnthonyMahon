@@ -19,7 +19,7 @@
 
 /* global define */
 
-/* eslint-disable strict */
+ 
 
 ;(function($) {
   'use strict'
