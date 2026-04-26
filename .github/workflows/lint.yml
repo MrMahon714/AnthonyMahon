@@ -23,6 +23,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install test dependencies
+        working-directory: ./COP4331C_POOSD/
+        run: npm install
+
       - name: Run linters
         run: npm run lint    #Run the 'lint' shortcut in package.scripts.json
 
