@@ -25,3 +25,7 @@ jobs:
 
       - name: Run linters
         run: npm run lint    #Run the 'lint' shortcut in package.scripts.json
+
+      - name: Run automated tests    #Assignment 5
+        run: npm run test
+        

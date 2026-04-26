@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "jest": "^30.3.0"
+  },
+
+    "scripts": {
+    "test": "jest",
+    "lint": "eslint . && stylelint \"**/*.css\" && htmlhint \"**/*.html\""
+  }
+}
