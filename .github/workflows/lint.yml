@@ -9,7 +9,7 @@ jobs:
 
     defaults:    #Tell Github's virtual computer to cd into the assignment folder first
       run:
-        working-directory: ./COP4331C_POOSD/*
+        working-directory: ./COP4331C_POOSD/Assignment1
 
     steps:
       - name: Checkout code
@@ -27,5 +27,7 @@ jobs:
         run: npm run lint    #Run the 'lint' shortcut in package.scripts.json
 
       - name: Run automated tests    #Assignment 5
-        run: npm run test
+        run:
+            working-directory: ./COP4331C_POOSD/    #Change directory to find new package files
+            npm run test
         
