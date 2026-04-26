@@ -9,6 +9,8 @@ export default [
             sourceType: "module",
             globals: {
                 ...globals.browser, // This fixes 'document', 'window', 'XMLHttpRequest', etc.
+                ...globals.node,    //Allow 'require' and 'module'
+                ...globals.jest,    //Allow 'test' and 'expect'
                 md5: "readonly",    // This fixes the 'md5 is not defined' error
                 module: "readonly"
             }
