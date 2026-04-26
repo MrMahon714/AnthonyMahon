@@ -27,7 +27,6 @@ jobs:
         run: npm run lint    #Run the 'lint' shortcut in package.scripts.json
 
       - name: Run automated tests    #Assignment 5
-        run:
-            working-directory: ./COP4331C_POOSD/    #Change directory to find new package files
-            npm run test
+        working-directory: ./COP4331C_POOSD/    #Change directory to find new package files
+        run: npm run test
         
