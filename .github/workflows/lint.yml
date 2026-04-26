@@ -9,7 +9,7 @@ jobs:
 
     defaults:    #Tell Github's virtual computer to cd into the assignment folder first
       run:
-        working-directory: ./COP4331C_POOSD/Assignment1
+        working-directory: ./COP4331C_POOSD
 
     steps:
       - name: Checkout code
